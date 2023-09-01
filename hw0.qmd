@@ -23,7 +23,7 @@ b = 3
 c = 2 
 
 # Determinant calculation using quadratic formula 
-D = sqrt(b ^ 2 - 4 * a * c) 
+D = b ^ 2 - 4 * a * c 
 cat("Determinant:",D)
 ```
 
@@ -38,7 +38,7 @@ if (D>0) {
   cat("x1:",x1,"; x2:",x2) 
   } else if (D==0) { 
   x = (- b)/(2 * a) 
-  cat("x1 = x2:",x) 
+  cat("x1 = x2 =",x) 
   } else print("There are no real roots")
 ```
 
