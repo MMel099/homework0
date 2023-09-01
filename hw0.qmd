@@ -10,7 +10,7 @@ editor: visual
 
 This is the well-known quadratic equation: $f(x) = ax^2 + bx + c = 0$
 
-It can be solved through a series of steps, the first of which is finding the determinant: $D=\sqrt{b^2 - 4ac}$
+It can be solved through a series of steps, the first of which is finding the determinant: $D=b^2 - 4ac$
 
 If $b^2 - 4ac$ is less than zero, the equation has no real roots. If $b^2 - 4ac$ is equal to zero, the equation will have exactly one real solution. Finally, if $b^2 - 4ac$ is greater than zero, the equation will have two real solutions
 
