@@ -1,0 +1,51 @@
+---
+title: "HW0" 
+format: html 
+editor: visual
+---
+
+# Max Melnikas
+
+## Problem 1
+
+This is the well-known quadratic equation: $f(x) = ax^2 + bx + c = 0$
+
+It can be solved through a series of steps, the first of which is finding the determinant: $D=\sqrt{b^2 - 4ac}$
+
+If $b^2 - 4ac$ is less than zero, the equation has no real roots. If $b^2 - 4ac$ is equal to zero, the equation will have exactly one real solution. Finally, if $b^2 - 4ac$ is greater than zero, the equation will have two real solutions
+
+```{r}
+#| echo: false 
+#| label: Determinant Calculation
+
+a = 1 
+b = 3 
+c = 2 
+
+# Determinant calculation using quadratic formula 
+D = sqrt(b ^ 2 - 4 * a * c) 
+cat("Determinant:",D)
+```
+
+The solutions to the equation follow the following formula: $$x_{1,2} = \frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
+
+```{r}
+#| label: calculate roots 
+#| echo: false 
+if (D>0) { 
+  x1 = (- b + sqrt(b^2 - 4 * a * c))/(2 * a) 
+  x2 = (- b - sqrt(b^2 - 4 * a * c))/(2 * a) 
+  cat("x1:",x1,"; x2:",x2) 
+  } else if (D==0) { 
+  x = (- b)/(2 * a) 
+  cat("x1 = x2:",x) 
+  } else print("There are no real roots")
+```
+
+```{r}
+#| label: graphing 
+#| echo: false 
+x <- seq(-5, 5, length = 300) 
+plot(x, a*x^2 + b*x + c, type = "l") 
+abline(h = 0, lty = 2)
+```
